@@ -3,37 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Activity 2.1.5 Class Demo</title>
+    <title>Authors &amp; Mentors | Rehan Ali</title>
+    <meta
+      name="description"
+      content="About the researcher Rehan Ali and mentor Mr. Craig Queenan for the bacteriophage T4 and ampicillin biofilm study."
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@400;600&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="body">
-    <div class="container-lg min-vh-100">
+  <body>
+    <div class="container-lg p-0 bg-white">
       <header>
-        <nav
-          class="navbar navbar-expand-lg nav-background-color"
-          data-bs-theme="dark"
-        >
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
           <div class="container">
-            <!-- Website Brand -->
-            <a href="index.html" class="navbar-bread">
-              <img
-                src="img/droplet.png"
-                alt="water logo"
-                class="d-inline-block align-text-top w-50"
-              />
-            </a>
-
-            <!-- Hamburger Menu Button -->
+            <a class="navbar-brand" href="index.html">Rehan Ali</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -42,35 +36,20 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Collapsible navbar menu with custom hover -->
             <div class="collapse navbar-collapse" id="navmenu">
-              <!-- Links to Hamburger icon -->
               <ul class="navbar-nav ms-auto">
-                <!-- ms-auto provides auto margin spacing -->
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="procedure.html">Procedure</a>
+                </li>
                 <li class="nav-item">
                   <a
+                    class="nav-link active"
                     href="authors.html"
-                    class="nav-link hover-underline-animation nav-menu-item"
+                    >Authors</a
                   >
-                    Authors
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="procedure.html"
-                    class="nav-link hover-underline-animation nav-menu-item"
-                  >
-                    Procedure
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="results.html"
-                    class="nav-link hover-underline-animation nav-menu-item"
-                  >
-                    Results
-                  </a>
                 </li>
               </ul>
             </div>
@@ -78,81 +57,90 @@
         </nav>
       </header>
 
-      <!-- About The Team -->
-      <section class="authors">
+      <section class="py-5 px-3">
         <div class="container">
-          <br />
-          <h1 class="text-center about-team">About the Team</h1>
-          <hr />
-          <br />
+          <div class="text-center mb-4">
+            <h1>About the Team</h1>
+            <hr class="w-25 mx-auto" />
+            <p class="mb-0">
+              This research was designed and carried out by a student researcher
+              with the guidance of a faculty mentor in the HTHS Research
+              Laboratory.
+            </p>
+          </div>
 
-          <!-- cards organized in a 2 x 2 matrix -->
           <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
-              <div class="card about">
-                <img src="img/woman1.jpg" alt="Name 1" class="card-img-top" />
+              <div class="card h-100">
                 <div class="card-body">
-                  <h4 class="card-title">Student Name</h4>
-                  <h5>Class: BME</h5>
-                  <p class="card-text">
-                    Describe (in detail) the contributions that this team member
-                    made to the project.
+                  <h3 class="card-title h4 mb-1">Rehan Ali</h3>
+                  <p class="text-muted mb-2">Student Researcher</p>
+                  <p class="mb-3">
+                    High Technology High School &middot; Lincroft, NJ
                   </p>
+                  <ul class="mb-0">
+                    <li>Developed the hypothesis and experimental design</li>
+                    <li>Prepared cultures, biofilms, and phage dilutions</li>
+                    <li>
+                      Performed the MIC agar dilution assays and recorded data
+                    </li>
+                    <li>
+                      Ran the statistical analysis (ANOVA and Dunnett&rsquo;s
+                      test)
+                    </li>
+                    <li>Wrote and presented the research paper</li>
+                  </ul>
                 </div>
               </div>
             </div>
+
             <div class="col">
-              <div class="card about">
-                <img src="img/man1.png" alt="Name 2" class="card-img-top" />
+              <div class="card h-100">
                 <div class="card-body">
-                  <h4 class="card-title">Student Name</h4>
-                  <h5>Class: SE</h5>
-                  <p class="card-text">
-                    Describe (in detail) the contributions that this team member
-                    made to the project.
+                  <h3 class="card-title h4 mb-1">Mr. Craig Queenan</h3>
+                  <p class="text-muted mb-2">Research Mentor</p>
+                  <p class="mb-3">
+                    High Technology High School &middot; Research Program
                   </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card about">
-                <img src="img/man2.jpg" alt="Name 3" class="card-img-top" />
-                <div class="card-body">
-                  <h4 class="card-title">Student Name</h4>
-                  <h5>Class: CEA</h5>
-                  <p class="card-text">
-                    Describe (in detail) the contributions that this team member
-                    made to the project.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card about">
-                <img src="img/woman2.jpg" alt="Name 4" class="card-img-top" />
-                <div class="card-body">
-                  <h4 class="card-title">Student Name</h4>
-                  <h5>Class: DE</h5>
-                  <p class="card-text">
-                    Describe (in detail) the contributions that this team member
-                    made to the project.
-                  </p>
+                  <ul class="mb-0">
+                    <li>Mentored the experimental design and research plan</li>
+                    <li>Demonstrated aseptic technique and lab procedures</li>
+                    <li>Provided laboratory oversight and safety guidance</li>
+                    <li>
+                      Reviewed the methodology, data, and written manuscript
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="mt-5">
+            <h2 class="h4">Acknowledgements</h2>
+            <ul class="mb-0">
+              <li>Dr. Dina Ellsworth for co-mentorship and guidance</li>
+              <li>
+                Mr. Colin Zhi Yong Leong (UCLA) for advice on methods and
+                statistical analysis
+              </li>
+              <li>
+                Ms. Teresa Hough, the HTHS faculty, and the PFA for supporting
+                the research program
+              </li>
+              <li>Family, for their encouragement and support</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <footer class="footer text p-5 text-light text-center position-relative">
-        <div class="container">
-          <p class="lead">Copyright &copy;SE 2026 Bootstrap Demo</p>
-          <a href="#" class="position-absolute bottom-0 end-0 p-5">
-            <i class="bi bi-arrow-up-circle h2 icon-white"></i>
-          </a>
+      <footer class="bg-light border-top py-4">
+        <div class="container text-center small text-muted">
+          <p class="mb-1">Rehan Ali &middot; High Technology High School</p>
+          <p class="mb-0">Mentored by Mr. Craig Queenan</p>
         </div>
       </footer>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

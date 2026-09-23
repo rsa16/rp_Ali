@@ -3,37 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Activity 2.1.5 Class Demo</title>
+    <title>
+      Bacteriophage T4 &amp; Ampicillin Susceptibility in E. coli Biofilms |
+      Rehan Ali
+    </title>
+    <meta
+      name="description"
+      content="Research project: the effects of sub-inhibitory bacteriophage T4 exposure on ampicillin susceptibility in Escherichia coli biofilms."
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@400;600&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="body">
-    <div class="container-lg min-vh-100">
+  <body>
+    <div class="container-lg p-0 min-vh-100 bg-white">
       <header>
-        <nav
-          class="navbar navbar-expand-lg nav-background-color"
-          data-bs-theme="dark"
-        >
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
           <div class="container">
-            <!-- Website Brand -->
-            <a href="#" class="navbar-bread">
-              <img
-                src="img/droplet.png"
-                alt="water logo"
-                class="d-inline-block align-text-top w-50"
-              />
-            </a>
-
-            <!-- Hamburger Menu Button -->
+            <a class="navbar-brand" href="index.html">Rehan Ali</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -42,35 +39,20 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Collapsible navbar menu with custom hover -->
             <div class="collapse navbar-collapse" id="navmenu">
-              <!-- Links to Hamburger icon -->
               <ul class="navbar-nav ms-auto">
-                <!-- ms-auto provides auto margin spacing -->
                 <li class="nav-item">
                   <a
-                    href="authors.html"
-                    class="nav-link hover-underline-animation nav-menu-item"
+                    class="nav-link active"
+                    href="index.html"
+                    >Home</a
                   >
-                    Authors
-                  </a>
                 </li>
                 <li class="nav-item">
-                  <a
-                    href="procedure.html"
-                    class="nav-link hover-underline-animation nav-menu-item"
-                  >
-                    Procedure
-                  </a>
+                  <a class="nav-link" href="procedure.html">Procedure</a>
                 </li>
                 <li class="nav-item">
-                  <a
-                    href="results.html"
-                    class="nav-link hover-underline-animation nav-menu-item"
-                  >
-                    Results
-                  </a>
+                  <a class="nav-link" href="authors.html">Authors</a>
                 </li>
               </ul>
             </div>
@@ -78,103 +60,102 @@
         </nav>
       </header>
 
-      <!-- Showcase -->
-      <section class="showcase text-light p-2 text-center">
+      <section class="bg-dark text-white pt-4 px-5 pb-5">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-6 p-0 d-flex align-items-center">
-              <img src="img/img-5509.jpg" alt="Sharp River" class="img-fluid" />
-              <!-- img fluid won't expand image larger than container and will scale 
-               appropriately if the browser gets narrower than the image's set width -->
+          <div class="row align-items-center g-4">
+            <div class="col-md-6">
+              <img
+                src="img/figure2.png"
+                alt="E. coli biofilms spread onto agar plates and matured in an incubator"
+                class="img-fluid"
+              />
             </div>
-            <div class="col-sm-6 p-0 d-flex align-items-center">
-              <div class="container">
-                <h1 class="display-4">
-                  Water Temperatures Near Avon, NJ (2021-2022)
-                </h1>
-                <h2>Building a Site with Bootstrap Demo</h2>
-              </div>
+            <div class="col-md-6">
+              <h1 class="h2">
+                The Effects of Sub-Inhibitory Bacteriophage T4 Exposure on
+                Ampicillin Susceptibility in <em>Escherichia coli</em> Biofilms
+              </h1>
+              <p class="mb-4">Rehan Ali &middot; High Technology High School</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Overview-->
-      <section class="overview text-dark p-2 text-left">
+      <section class="bg-light px-5 py-5">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-4 p-3">
+          <div class="row align-items-center g-4">
+            <div class="col-md-7">
+              <h2>Background</h2>
+              <p>
+                Biofilms are communities of bacteria that build a protective
+                matrix of proteins, sugars, and DNA. This shield, together with
+                slower bacterial metabolism, makes biofilm infections far harder
+                to treat than free-floating bacteria. <em>Escherichia coli</em>
+                is a common biofilm former and a frequent cause of persistent
+                infections.
+              </p>
+              <ul class="mb-0">
+                <li>
+                  Biofilms cause most chronic infections, including those on
+                  catheters and implants.
+                </li>
+                <li>
+                  Antibiotics such as ampicillin often fail inside the biofilm
+                  matrix.
+                </li>
+                <li>
+                  Bacteriophages can weaken biofilms and may act as a
+                  &ldquo;priming&rdquo; treatment.
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-5">
               <img
-                src="img/19418.jpeg"
-                alt="Water Temperature Graph"
-                class="img-fluid"
+                src="img/figure1.png"
+                alt="Steps for preparing the liquid E. coli B culture"
+                class="img-fluid border"
               />
             </div>
-            <div class="col-sm-8 p-3">
-              <h1 class="overview-left-padding">Background</h1>
-              <p class="lead overview-font overview-left-padding">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                fuga cumque magnam aliquam optio. Maiores recusandae eius at
-                quod ullam quidem omnis. Tempore itaque ad ipsum cumque cum
-                praesentium dicta! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Obcaecati neque quos eum pariatur esse debitis
-                iure atque blanditiis incidunt. Nesciunt vitae dolores
-                similique, saepe alias blanditiis neque non sapiente numquam.
-              </p>
-            </div>
           </div>
+        </div>
+      </section>
 
-          <div class="row">
-            <div class="col-sm-8 p-3">
-              <h1 class="overview-left-padding">Rationale</h1>
-              <p class="lead overview-font overview-left-padding">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                fuga cumque magnam aliquam optio. Maiores recusandae eius at
-                quod ullam quidem omnis. Tempore itaque ad ipsum cumque cum
-                praesentium dicta! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Obcaecati neque quos eum pariatur esse debitis
-                iure atque blanditiis incidunt. Nesciunt vitae dolores
-                similique, saepe alias blanditiis neque non sapiente numquam.
-              </p>
-            </div>
-            <div class="col-sm-4 p-3">
-              <img src="img/watermap.jpg" alt="Water Map" class="img-fluid" />
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-4 p-3">
+      <section class="py-5 px-5">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-md-5 order-md-2">
               <img
-                src="img/phytoplankton-pnas.jpg"
-                alt="Phytoplankton"
-                class="img-fluid"
+                src="img/figure3.png"
+                alt="Bar chart of mean ampicillin MIC against phage T4 concentration"
+                class="img-fluid border"
               />
             </div>
-            <div class="col-sm-8 p-3">
-              <h1 class="overview-left-padding">Background</h1>
-              <p class="lead overview-font overview-left-padding">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                fuga cumque magnam aliquam optio. Maiores recusandae eius at
-                quod ullam quidem omnis. Tempore itaque ad ipsum cumque cum
-                praesentium dicta! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Obcaecati neque quos eum pariatur esse debitis
-                iure atque blanditiis incidunt. Nesciunt vitae dolores
-                similique, saepe alias blanditiis neque non sapiente numquam.
+            <div class="col-md-7 order-md-1">
+              <h2>Objective &amp; Hypothesis</h2>
+              <p>
+                The objective was to determine whether exposing a mature
+                <em>E. coli</em> biofilm to sub-inhibitory concentrations of
+                bacteriophage T4 lowers the minimum inhibitory concentration
+                (MIC) of ampicillin required to inhibit growth.
+              </p>
+              <p class="mb-0">
+                <strong>Hypothesis:</strong> if phage exposure weakens the
+                biofilm, then less ampicillin should be needed to stop bacterial
+                growth.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <footer class="footer text p-5 text-light text-center position-relative">
-        <div class="container">
-          <p class="lead">Copyright &copy;SE 2026 Bootstrap Demo</p>
-          <a href="#" class="position-absolute bottom-0 end-0 p-5">
-            <i class="bi bi-arrow-up-circle h2 icon-white"></i>
-          </a>
+      <footer class="bg-light border-top py-4">
+        <div class="container text-center small text-muted">
+          <p class="mb-1">Rehan Ali &middot; High Technology High School</p>
+          <p class="mb-0">Mentored by Mr. Craig Queenan</p>
         </div>
       </footer>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

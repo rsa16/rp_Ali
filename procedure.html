@@ -3,37 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Activity 2.1.5 Class Demo</title>
+    <title>Procedure | Rehan Ali</title>
+    <meta
+      name="description"
+      content="A simplified seven-step procedure for testing the effect of bacteriophage T4 on ampicillin susceptibility in E. coli biofilms."
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@400;600&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="body">
-    <div class="container-lg min-vh-100">
+  <body>
+    <div class="container-lg p-0 min-vh-100 bg-white">
       <header>
-        <nav
-          class="navbar navbar-expand-lg nav-background-color"
-          data-bs-theme="dark"
-        >
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
           <div class="container">
-            <!-- Website Brand -->
-            <a href="index.html" class="navbar-bread">
-              <img
-                src="img/droplet.png"
-                alt="water logo"
-                class="d-inline-block align-text-top w-50"
-              />
-            </a>
-
-            <!-- Hamburger Menu Button -->
+            <a class="navbar-brand" href="index.html">Rehan Ali</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -42,35 +36,20 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Collapsible navbar menu with custom hover -->
             <div class="collapse navbar-collapse" id="navmenu">
-              <!-- Links to Hamburger icon -->
               <ul class="navbar-nav ms-auto">
-                <!-- ms-auto provides auto margin spacing -->
                 <li class="nav-item">
-                  <a
-                    href="authors.html"
-                    class="nav-link hover-underline-animation nav-menu-item"
-                  >
-                    Authors
-                  </a>
+                  <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                   <a
+                    class="nav-link active"
                     href="procedure.html"
-                    class="nav-link hover-underline-animation nav-menu-item"
+                    >Procedure</a
                   >
-                    Procedure
-                  </a>
                 </li>
                 <li class="nav-item">
-                  <a
-                    href="results.html"
-                    class="nav-link hover-underline-animation nav-menu-item"
-                  >
-                    Results
-                  </a>
+                  <a class="nav-link" href="authors.html">Authors</a>
                 </li>
               </ul>
             </div>
@@ -78,129 +57,207 @@
         </nav>
       </header>
 
-      <!-- How to use the sensor -->
-      <section class="procedure">
+      <section class="py-5 px-3">
         <div class="container">
-          <br />
-          <div class="text-center">
+          <div class="text-center mb-4">
             <h1>Procedure</h1>
-            <h2>
-              Using a numbered list, describe your procedure (include pictures)
-            </h2>
+            <hr class="w-25 mx-auto" />
+            <p class="mb-0">
+              Biofilms were grown for 18 hours, treated with a range of phage T4
+              doses, then tested against an ampicillin dilution series.
+            </p>
           </div>
-          <hr />
-          <br />
-          <table
-            class="table table-hover text-center table-light table-bordered border-dark-subtle"
-          >
-            <thead>
-              <tr class="table-primary">
-                <th>
-                  <h3>Step</h3>
-                </th>
-                <th>
-                  <h3>Description</h3>
-                </th>
-                <th>
-                  <h3>Image</h3>
-                </th>
-              </tr>
-            </thead>
 
-            <tbody class="table-group-divider">
-              <!-- Row 1 -->
-              <tr class="align-middle">
-                <!-- scope = "row" specifies the header cell is the header for a row -->
-                <th class="table-secondary" scope="row">
-                  <h3>1</h3>
-                </th>
-                <td>
-                  <h3 class="howTo">Start Python Flask Server</h3>
-                </td>
-                <td class="text-center">
-                  <img src="img/python-logo.png" alt="Python Logo" />
-                </td>
-              </tr>
-              
-              <!-- Row 2 -->
-              <tr class="align-middle">
-                <!-- scope = "row" specifies the header cell is the header for a row -->
-                <th class="table-secondary" scope="row">
-                  <h3>2</h3>
-                </th>
-                <td>
-                  <h3 class="howTo">
-                    Power circuit on. SR-04/05 transmits data to Nano IoT
-                  </h3>
-                </td>
-                <td class="text-center">
-                  <img src="img/range-finder-tp.png" alt="SR04 Range Finder" />
-                </td>
-              </tr>
-              
-              <!-- Row 3 -->
-              <tr class="align-middle">
-                <!-- scope = "row" specifies the header cell is the header for a row -->
-                <th class="table-secondary" scope="row">
-                  <h3>3</h3>
-                </th>
-                <td>
-                  <h3 class="howTo">
-                    Nano IoT connects to PC via WiFi and sends data to Arduino
-                    program
-                  </h3>
-                </td>
-                <td class="text-center">
-                  <img src="img/nano33-iot3.png" alt="Nano33 IOT" />
-                </td>
-              </tr>
-              
-              <!-- Row 4 -->
-              <tr class="align-middle">
-                <!-- scope = "row" specifies the header cell is the header for a row -->
-                <th class="table-secondary" scope="row">
-                  <h3>4</h3>
-                </th>
-                <td>
-                  <h3 class="howTo">
-                    Arduino and Flask server communicate via HTTP request
-                    protocol
-                  </h3>
-                </td>
-                <td class="text-center">
-                  <img src="img/arduino-logo.png" alt="Arduino Logo" />
-                </td>
-              </tr>
-              
-              <!-- Row 5 -->
-              <tr class="align-middle">
-                <!-- scope = "row" specifies the header cell is the header for a row -->
-                <th class="table-secondary" scope="row">
-                  <h3>5</h3>
-                </th>
-                <td>
-                  <h3 class="howTo">
-                    Flask connects to Firebase and sends data for storage
-                  </h3>
-                </td>
-                <td class="text-center">
-                  <img src="img/firebase-logo.png" alt="Firebase" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle">
+              <thead>
+                <tr>
+                  <th class="text-center" style="width: 8%">Step</th>
+                  <th style="width: 57%">Procedure</th>
+                  <th class="text-center" style="width: 35%">Image</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>
+                    <strong>Grow the liquid culture</strong>
+                    <ul class="mb-0 mt-2">
+                      <li>Start from the <em>E. coli</em> B agar slant</li>
+                      <li>
+                        Add 5&ndash;10 mL sterile LB broth to a culture tube
+                      </li>
+                      <li>Transfer a colony using an inoculating loop</li>
+                      <li>
+                        Incubate at 37 &deg;C, 200 rpm until visibly turbid
+                      </li>
+                      <li>Adjust to an OD600 of 0.10&ndash;0.12</li>
+                    </ul>
+                  </td>
+                  <td class="text-center">
+                    <img
+                      src="img/figure1.png"
+                      alt="Preparation of the liquid E. coli B culture"
+                      class="step-img"
+                    />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">2</td>
+                  <td>
+                    <strong>Pour the Mueller-Hinton plates</strong>
+                    <ul class="mb-0 mt-2">
+                      <li>
+                        Dissolve 38 g of Mueller-Hinton agar per liter of water
+                      </li>
+                      <li>
+                        Autoclave at 121 &deg;C for 30 minutes, then cool to ~50
+                        &deg;C
+                      </li>
+                      <li>Pour 25 mL into each pre-labeled plate</li>
+                      <li>Solidify, then store inverted at 4 &deg;C</li>
+                    </ul>
+                  </td>
+                  <td class="text-center">
+                    <img
+                      src="img/step2.svg"
+                      alt="Molten agar poured into petri dishes"
+                      class="step-img"
+                    />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">3</td>
+                  <td>
+                    <strong>Inoculate and spread the biofilm</strong>
+                    <ul class="mb-0 mt-2">
+                      <li>Vortex the culture for 15 seconds</li>
+                      <li>
+                        Pipette 100 &micro;L onto the center of each plate
+                      </li>
+                      <li>Spread evenly with a sterile spreader</li>
+                      <li>Leave the lids ajar for 10 minutes to absorb</li>
+                    </ul>
+                  </td>
+                  <td class="text-center">
+                    <img
+                      src="img/figure2a.png"
+                      alt="Inoculum spread evenly across an agar plate"
+                      class="step-img"
+                    />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">4</td>
+                  <td>
+                    <strong>Mature the biofilm</strong>
+                    <ul class="mb-0 mt-2">
+                      <li>Parafilm and invert the plates</li>
+                      <li>Incubate statically at 37 &deg;C for 18 hours</li>
+                      <li>Allow the biofilm to fully form and mature</li>
+                    </ul>
+                  </td>
+                  <td class="text-center">
+                    <img
+                      src="img/figure2b.png"
+                      alt="Plates incubated at 37 degrees Celsius for 18 hours"
+                      class="step-img"
+                    />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">5</td>
+                  <td>
+                    <strong>Expose the biofilms to phage T4</strong>
+                    <ul class="mb-0 mt-2">
+                      <li>Prepare serial dilutions in sterile LB broth</li>
+                      <li>
+                        Use 0, 10<sup>4</sup>, 10<sup>6</sup>, 10<sup>8</sup>,
+                        and 10<sup>10</sup> PFU/mL
+                      </li>
+                      <li>Apply 100 &micro;L of each dilution to a biofilm</li>
+                      <li>Incubate statically at 37 &deg;C for 4 hours</li>
+                    </ul>
+                  </td>
+                  <td class="text-center">
+                    <img
+                      src="img/step5.svg"
+                      alt="Serial phage dilutions applied to the biofilms"
+                      class="step-img"
+                    />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">6</td>
+                  <td>
+                    <strong>Collect and standardize</strong>
+                    <ul class="mb-0 mt-2">
+                      <li>Add 1 mL sterile saline and scrape the plate</li>
+                      <li>
+                        Transfer the sample to a labeled microcentrifuge tube
+                      </li>
+                      <li>Mix thoroughly to resuspend the cells</li>
+                      <li>Match each sample to a 0.5 McFarland standard</li>
+                    </ul>
+                  </td>
+                  <td class="text-center">
+                    <img
+                      src="img/step6.svg"
+                      alt="Biofilm collected and standardized to a 0.5 McFarland standard"
+                      class="step-img"
+                    />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="text-center">7</td>
+                  <td>
+                    <strong>Spot and read the MIC</strong>
+                    <ul class="mb-0 mt-2">
+                      <li>
+                        Prepare ampicillin plates at 0, 2, 4, 8, 16, and 32
+                        &micro;g/mL
+                      </li>
+                      <li>Spot 10 &micro;L of each sample and let it dry</li>
+                      <li>Incubate inverted at 37 &deg;C for 18 hours</li>
+                      <li>
+                        Read the MIC: lowest concentration with no visible
+                        growth
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="text-center">
+                    <img
+                      src="img/step7.svg"
+                      alt="Samples spot-inoculated onto ampicillin plates and the MIC read"
+                      class="step-img"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="small text-muted mb-0">
+            Protocol diagrams (Figure 1 and Figure 2) were created with
+            BioRender.
+          </p>
         </div>
       </section>
 
-      <footer class="footer text p-5 text-light text-center position-relative">
-        <div class="container">
-          <p class="lead">Copyright &copy;SE 2026 Bootstrap Demo</p>
-          <a href="#" class="position-absolute bottom-0 end-0 p-5">
-            <i class="bi bi-arrow-up-circle h2 icon-white"></i>
-          </a>
+      <footer class="bg-light border-top py-4">
+        <div class="container text-center small text-muted">
+          <p class="mb-1">Copyright &copy; Rehan Ali &middot; High Technology High School</p>
+          <p class="mb-0">Mentored by Mr. Craig Queenan</p>
         </div>
       </footer>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
