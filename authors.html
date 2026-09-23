@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Activity 2.1.5 Class Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="body">
+    <div class="container-lg min-vh-100">
+      <header>
+        <nav
+          class="navbar navbar-expand-lg nav-background-color"
+          data-bs-theme="dark"
+        >
+          <div class="container">
+            <!-- Website Brand -->
+            <a href="index.html" class="navbar-bread">
+              <img
+                src="img/droplet.png"
+                alt="water logo"
+                class="d-inline-block align-text-top w-50"
+              />
+            </a>
+
+            <!-- Hamburger Menu Button -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navmenu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navbar menu with custom hover -->
+            <div class="collapse navbar-collapse" id="navmenu">
+              <!-- Links to Hamburger icon -->
+              <ul class="navbar-nav ms-auto">
+                <!-- ms-auto provides auto margin spacing -->
+                <li class="nav-item">
+                  <a
+                    href="authors.html"
+                    class="nav-link hover-underline-animation nav-menu-item"
+                  >
+                    Authors
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="procedure.html"
+                    class="nav-link hover-underline-animation nav-menu-item"
+                  >
+                    Procedure
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="results.html"
+                    class="nav-link hover-underline-animation nav-menu-item"
+                  >
+                    Results
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- About The Team -->
+      <section class="authors">
+        <div class="container">
+          <br />
+          <h1 class="text-center about-team">About the Team</h1>
+          <hr />
+          <br />
+
+          <!-- cards organized in a 2 x 2 matrix -->
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="card about">
+                <img src="img/woman1.jpg" alt="Name 1" class="card-img-top" />
+                <div class="card-body">
+                  <h4 class="card-title">Student Name</h4>
+                  <h5>Class: BME</h5>
+                  <p class="card-text">
+                    Describe (in detail) the contributions that this team member
+                    made to the project.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card about">
+                <img src="img/man1.png" alt="Name 2" class="card-img-top" />
+                <div class="card-body">
+                  <h4 class="card-title">Student Name</h4>
+                  <h5>Class: SE</h5>
+                  <p class="card-text">
+                    Describe (in detail) the contributions that this team member
+                    made to the project.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card about">
+                <img src="img/man2.jpg" alt="Name 3" class="card-img-top" />
+                <div class="card-body">
+                  <h4 class="card-title">Student Name</h4>
+                  <h5>Class: CEA</h5>
+                  <p class="card-text">
+                    Describe (in detail) the contributions that this team member
+                    made to the project.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card about">
+                <img src="img/woman2.jpg" alt="Name 4" class="card-img-top" />
+                <div class="card-body">
+                  <h4 class="card-title">Student Name</h4>
+                  <h5>Class: DE</h5>
+                  <p class="card-text">
+                    Describe (in detail) the contributions that this team member
+                    made to the project.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer text p-5 text-light text-center position-relative">
+        <div class="container">
+          <p class="lead">Copyright &copy;SE 2026 Bootstrap Demo</p>
+          <a href="#" class="position-absolute bottom-0 end-0 p-5">
+            <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

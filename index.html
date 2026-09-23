@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Activity 2.1.5 Class Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="body">
+    <div class="container-lg min-vh-100">
+      <header>
+        <nav
+          class="navbar navbar-expand-lg nav-background-color"
+          data-bs-theme="dark"
+        >
+          <div class="container">
+            <!-- Website Brand -->
+            <a href="#" class="navbar-bread">
+              <img
+                src="img/droplet.png"
+                alt="water logo"
+                class="d-inline-block align-text-top w-50"
+              />
+            </a>
+
+            <!-- Hamburger Menu Button -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navmenu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navbar menu with custom hover -->
+            <div class="collapse navbar-collapse" id="navmenu">
+              <!-- Links to Hamburger icon -->
+              <ul class="navbar-nav ms-auto">
+                <!-- ms-auto provides auto margin spacing -->
+                <li class="nav-item">
+                  <a
+                    href="authors.html"
+                    class="nav-link hover-underline-animation nav-menu-item"
+                  >
+                    Authors
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="procedure.html"
+                    class="nav-link hover-underline-animation nav-menu-item"
+                  >
+                    Procedure
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="results.html"
+                    class="nav-link hover-underline-animation nav-menu-item"
+                  >
+                    Results
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Showcase -->
+      <section class="showcase text-light p-2 text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 p-0 d-flex align-items-center">
+              <img src="img/img-5509.jpg" alt="Sharp River" class="img-fluid" />
+              <!-- img fluid won't expand image larger than container and will scale 
+               appropriately if the browser gets narrower than the image's set width -->
+            </div>
+            <div class="col-sm-6 p-0 d-flex align-items-center">
+              <div class="container">
+                <h1 class="display-4">
+                  Water Temperatures Near Avon, NJ (2021-2022)
+                </h1>
+                <h2>Building a Site with Bootstrap Demo</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview-->
+      <section class="overview text-dark p-2 text-left">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 p-3">
+              <img
+                src="img/19418.jpeg"
+                alt="Water Temperature Graph"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-sm-8 p-3">
+              <h1 class="overview-left-padding">Background</h1>
+              <p class="lead overview-font overview-left-padding">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                fuga cumque magnam aliquam optio. Maiores recusandae eius at
+                quod ullam quidem omnis. Tempore itaque ad ipsum cumque cum
+                praesentium dicta! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Obcaecati neque quos eum pariatur esse debitis
+                iure atque blanditiis incidunt. Nesciunt vitae dolores
+                similique, saepe alias blanditiis neque non sapiente numquam.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-8 p-3">
+              <h1 class="overview-left-padding">Rationale</h1>
+              <p class="lead overview-font overview-left-padding">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                fuga cumque magnam aliquam optio. Maiores recusandae eius at
+                quod ullam quidem omnis. Tempore itaque ad ipsum cumque cum
+                praesentium dicta! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Obcaecati neque quos eum pariatur esse debitis
+                iure atque blanditiis incidunt. Nesciunt vitae dolores
+                similique, saepe alias blanditiis neque non sapiente numquam.
+              </p>
+            </div>
+            <div class="col-sm-4 p-3">
+              <img src="img/watermap.jpg" alt="Water Map" class="img-fluid" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-4 p-3">
+              <img
+                src="img/phytoplankton-pnas.jpg"
+                alt="Phytoplankton"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-sm-8 p-3">
+              <h1 class="overview-left-padding">Background</h1>
+              <p class="lead overview-font overview-left-padding">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                fuga cumque magnam aliquam optio. Maiores recusandae eius at
+                quod ullam quidem omnis. Tempore itaque ad ipsum cumque cum
+                praesentium dicta! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Obcaecati neque quos eum pariatur esse debitis
+                iure atque blanditiis incidunt. Nesciunt vitae dolores
+                similique, saepe alias blanditiis neque non sapiente numquam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer text p-5 text-light text-center position-relative">
+        <div class="container">
+          <p class="lead">Copyright &copy;SE 2026 Bootstrap Demo</p>
+          <a href="#" class="position-absolute bottom-0 end-0 p-5">
+            <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
