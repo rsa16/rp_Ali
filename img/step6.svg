@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Biofilm scraped from the plate, collected, and standardized to a 0.5 McFarland turbidity">
+  <circle cx="160" cy="120" r="96" fill="#eef5f6" />
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- plate being scraped -->
+    <ellipse cx="92" cy="104" rx="60" ry="38" fill="#f3f8f8" stroke="#17616e" stroke-width="5" />
+    <ellipse cx="92" cy="100" rx="46" ry="28" fill="#efe7d2" stroke="#17616e" stroke-width="4" />
+    <circle cx="76" cy="94" r="3" fill="#c8553d" />
+    <circle cx="104" cy="100" r="3" fill="#c8553d" />
+    <circle cx="90" cy="110" r="2.6" fill="#c8553d" />
+    <!-- pipette scraping -->
+    <path d="M150 40 L104 92" stroke="#17616e" stroke-width="7" />
+    <path d="M150 40 l8 -8" stroke="#17616e" stroke-width="7" />
+    <!-- arrow down -->
+    <path d="M92 152 v22" stroke="#e2a33b" stroke-width="6" />
+    <path d="M84 170 l8 12 l8 -12 z" fill="#e2a33b" />
+    <!-- microcentrifuge tube -->
+    <path d="M74 190 h36 v30 l-18 18 l-18 -18 z" fill="#f3f8f8" stroke="#17616e" stroke-width="5" />
+    <path d="M78 198 h28 v20 l-14 14 l-14 -14 z" fill="#cfe3e6" />
+    <rect x="70" y="184" width="44" height="9" rx="4" fill="#17616e" />
+    <!-- McFarland reference tubes -->
+    <rect x="196" y="60" width="30" height="110" rx="15" fill="#f3f8f8" stroke="#17616e" stroke-width="4" />
+    <path d="M198 110 h26 v45 a13 13 0 0 1 -26 0 z" fill="#efe7d2" />
+    <rect x="244" y="60" width="30" height="110" rx="15" fill="#f3f8f8" stroke="#17616e" stroke-width="4" />
+    <path d="M246 102 h26 v53 a13 13 0 0 1 -26 0 z" fill="#d9b877" />
+    <text x="231" y="196" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#17616e">0.5 McFarland</text>
+    <path d="M226 128 h18" stroke="#17616e" stroke-width="4" />
+    <path d="M240 128 l6 8 l-6 8 z" fill="#17616e" />
+  </g>
+</svg>
