@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        if (sessionStorage.getItem("rp-nav") === "1") {
+          document.documentElement.classList.add("is-navigating");
+        }
+      } catch (error) {}
+    </script>
     <title>
       Bacteriophage T4 &amp; Ampicillin Susceptibility in E. coli Biofilms |
       Rehan Ali
@@ -26,6 +34,13 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="splash">
+      <div class="splash-inner">
+        <span class="splash-mark">Rehan Ali</span>
+        <span class="splash-sub">Research Project</span>
+        <span class="splash-bar"><span class="splash-bar-fill"></span></span>
+      </div>
+    </div>
     <div class="container-lg p-0 min-vh-100 bg-white">
       <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -60,22 +75,17 @@
         </nav>
       </header>
 
-      <section class="bg-dark text-white pt-4 px-5 pb-5">
+      <section class="hero-banner bg-dark text-white" data-hero>
         <div class="container">
-          <div class="row align-items-center g-4">
-            <div class="col-md-6">
-              <img
-                src="img/figure2.png"
-                alt="E. coli biofilms spread onto agar plates and matured in an incubator"
-                class="img-fluid"
-              />
-            </div>
-            <div class="col-md-6">
-              <h1 class="h2">
+          <div class="row align-items-center">
+            <div class="col-md-7 hero-text">
+              <h1 class="h2 hero-title" data-split>
                 The Effects of Sub-Inhibitory Bacteriophage T4 Exposure on
                 Ampicillin Susceptibility in <em>Escherichia coli</em> Biofilms
               </h1>
-              <p class="mb-4">Rehan Ali &middot; High Technology High School</p>
+              <p class="hero-meta mb-0" data-hero-item>
+                Rehan Ali &middot; High Technology High School
+              </p>
             </div>
           </div>
         </div>
@@ -85,8 +95,8 @@
         <div class="container">
           <div class="row align-items-center g-4">
             <div class="col-md-7">
-              <h2>Background</h2>
-              <p>
+              <h2 data-split>Background</h2>
+              <p data-reveal>
                 Biofilms are communities of bacteria that build a protective
                 matrix of proteins, sugars, and DNA. This shield, together with
                 slower bacterial metabolism, makes biofilm infections far harder
@@ -94,7 +104,7 @@
                 is a common biofilm former and a frequent cause of persistent
                 infections.
               </p>
-              <ul class="mb-0">
+              <ul class="mb-0" data-reveal>
                 <li>
                   Biofilms cause most chronic infections, including those on
                   catheters and implants.
@@ -114,6 +124,7 @@
                 src="img/figure1.png"
                 alt="Steps for preparing the liquid E. coli B culture"
                 class="img-fluid border"
+                data-reveal
               />
             </div>
           </div>
@@ -128,17 +139,18 @@
                 src="img/figure3.png"
                 alt="Bar chart of mean ampicillin MIC against phage T4 concentration"
                 class="img-fluid border"
+                data-reveal
               />
             </div>
             <div class="col-md-7 order-md-1">
-              <h2>Objective &amp; Hypothesis</h2>
-              <p>
+              <h2 data-split>Objective &amp; Hypothesis</h2>
+              <p data-reveal>
                 The objective was to determine whether exposing a mature
                 <em>E. coli</em> biofilm to sub-inhibitory concentrations of
                 bacteriophage T4 lowers the minimum inhibitory concentration
                 (MIC) of ampicillin required to inhibit growth.
               </p>
-              <p class="mb-0">
+              <p class="mb-0" data-reveal>
                 <strong>Hypothesis:</strong> if phage exposure weakens the
                 biofilm, then less ampicillin should be needed to stop bacterial
                 growth.
@@ -161,5 +173,8 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="./js/animations.js"></script>
   </body>
 </html>

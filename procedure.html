@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        if (sessionStorage.getItem("rp-nav") === "1") {
+          document.documentElement.classList.add("is-navigating");
+        }
+      } catch (error) {}
+    </script>
     <title>Procedure | Rehan Ali</title>
     <meta
       name="description"
@@ -23,6 +31,13 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="splash" aria-hidden="true">
+      <div class="splash-inner">
+        <span class="splash-mark">Rehan Ali</span>
+        <span class="splash-sub">Procedure</span>
+        <span class="splash-bar"><span class="splash-bar-fill"></span></span>
+      </div>
+    </div>
     <div class="container-lg p-0 min-vh-100 bg-white">
       <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -60,9 +75,9 @@
       <section class="py-5 px-3">
         <div class="container">
           <div class="text-center mb-4">
-            <h1>Procedure</h1>
+            <h1 data-split>Procedure</h1>
             <hr class="w-25 mx-auto" />
-            <p class="mb-0">
+            <p class="mb-0" data-reveal>
               Biofilms were grown for 18 hours, treated with a range of phage T4
               doses, then tested against an ampicillin dilution series.
             </p>
@@ -78,7 +93,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr data-reveal>
                   <td class="text-center">1</td>
                   <td>
                     <strong>Grow the liquid culture</strong>
@@ -103,7 +118,7 @@
                   </td>
                 </tr>
 
-                <tr>
+                <tr data-reveal>
                   <td class="text-center">2</td>
                   <td>
                     <strong>Pour the Mueller-Hinton plates</strong>
@@ -128,7 +143,7 @@
                   </td>
                 </tr>
 
-                <tr>
+                <tr data-reveal>
                   <td class="text-center">3</td>
                   <td>
                     <strong>Inoculate and spread the biofilm</strong>
@@ -150,7 +165,7 @@
                   </td>
                 </tr>
 
-                <tr>
+                <tr data-reveal>
                   <td class="text-center">4</td>
                   <td>
                     <strong>Mature the biofilm</strong>
@@ -169,7 +184,7 @@
                   </td>
                 </tr>
 
-                <tr>
+                <tr data-reveal>
                   <td class="text-center">5</td>
                   <td>
                     <strong>Expose the biofilms to phage T4</strong>
@@ -192,7 +207,7 @@
                   </td>
                 </tr>
 
-                <tr>
+                <tr data-reveal>
                   <td class="text-center">6</td>
                   <td>
                     <strong>Collect and standardize</strong>
@@ -214,7 +229,7 @@
                   </td>
                 </tr>
 
-                <tr>
+                <tr data-reveal>
                   <td class="text-center">7</td>
                   <td>
                     <strong>Spot and read the MIC</strong>
@@ -243,7 +258,7 @@
             </table>
           </div>
 
-          <p class="small text-muted mb-0">
+          <p class="small text-muted mb-0" data-reveal>
             Protocol diagrams (Figure 1 and Figure 2) were created with
             BioRender.
           </p>
@@ -263,5 +278,8 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="./js/animations.js"></script>
   </body>
 </html>

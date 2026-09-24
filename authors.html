@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        if (sessionStorage.getItem("rp-nav") === "1") {
+          document.documentElement.classList.add("is-navigating");
+        }
+      } catch (error) {}
+    </script>
     <title>Authors &amp; Mentors | Rehan Ali</title>
     <meta
       name="description"
@@ -23,7 +31,14 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="container-lg p-0 bg-white">
+    <div class="splash">
+      <div class="splash-inner">
+        <span class="splash-mark">Rehan Ali</span>
+        <span class="splash-sub">Authors</span>
+        <span class="splash-bar"><span class="splash-bar-fill"></span></span>
+      </div>
+    </div>
+    <div class="container-lg min-vh-100 p-0 bg-white">
       <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
           <div class="container">
@@ -60,9 +75,9 @@
       <section class="py-5 px-3">
         <div class="container">
           <div class="text-center mb-4">
-            <h1>About the Team</h1>
+            <h1 data-split>About the Team</h1>
             <hr class="w-25 mx-auto" />
-            <p class="mb-0">
+            <p class="mb-0" data-reveal>
               This research was designed and carried out by a student researcher
               with the guidance of a faculty mentor in the HTHS Research
               Laboratory.
@@ -71,7 +86,12 @@
 
           <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
-              <div class="card h-100">
+              <div class="card h-100" data-reveal>
+                <img
+                  src="img/rehan-ali-profile.svg"
+                  class="profile-image rounded-circle mx-auto mt-4"
+                  alt="Profile image for Rehan Ali"
+                />
                 <div class="card-body">
                   <h3 class="card-title h4 mb-1">Rehan Ali</h3>
                   <p class="text-muted mb-2">Student Researcher</p>
@@ -95,7 +115,12 @@
             </div>
 
             <div class="col">
-              <div class="card h-100">
+              <div class="card h-100" data-reveal>
+                <img
+                  src="img/craig-queenan-profile.svg"
+                  class="profile-image rounded-circle mx-auto mt-4"
+                  alt="Profile image for Craig Queenan"
+                />
                 <div class="card-body">
                   <h3 class="card-title h4 mb-1">Mr. Craig Queenan</h3>
                   <p class="text-muted mb-2">Research Mentor</p>
@@ -116,8 +141,8 @@
           </div>
 
           <div class="mt-5">
-            <h2 class="h4">Acknowledgements</h2>
-            <ul class="mb-0">
+            <h2 class="h4" data-split>Acknowledgements</h2>
+            <ul class="mb-0" data-reveal>
               <li>Dr. Dina Ellsworth for co-mentorship and guidance</li>
               <li>
                 Mr. Colin Zhi Yong Leong (UCLA) for advice on methods and
@@ -146,5 +171,8 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="./js/animations.js"></script>
   </body>
 </html>

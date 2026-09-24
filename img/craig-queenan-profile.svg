@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Profile illustration for Craig Queenan</title>
+  <desc id="desc">A simple illustrated profile avatar with the initials CQ.</desc>
+  <rect width="240" height="240" rx="120" fill="#536b78"/>
+  <circle cx="120" cy="92" r="42" fill="#e7b98f"/>
+  <path d="M78 91c2-34 20-53 44-53 27 0 42 19 43 53-13-13-27-19-44-19-16 0-30 6-43 19Z" fill="#4a3028"/>
+  <path d="M57 214c7-49 30-72 63-72s56 23 63 72" fill="#e7b98f"/>
+  <path d="M48 240c7-54 33-83 72-83s65 29 72 83" fill="#f8f9fa"/>
+  <text x="120" y="224" fill="#536b78" font-family="Georgia, serif" font-size="25" font-weight="600" text-anchor="middle">CQ</text>
+</svg>
