@@ -83,6 +83,19 @@ footer {
   height: auto;
 }
 
+.procedure-table {
+  font-size: clamp(1.2rem, 0.7vw, 1.3rem);
+}
+
+.procedure-table td img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.63 / 1;
+  object-fit: contain;
+  object-position: center;
+  margin-inline: auto;
+}
+
 .hero-banner {
   position: relative;
   isolation: isolate;
