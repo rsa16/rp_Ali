@@ -128,8 +128,8 @@ footer {
 }
 
 .profile-image {
-  width: 9rem;
-  height: 9rem;
+  width: 16rem;
+  height: 16rem;
   object-fit: cover;
 }
 
