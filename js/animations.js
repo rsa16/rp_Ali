@@ -7,6 +7,17 @@ var splash = document.querySelector(".splash");
 var header = document.querySelector("header");
 var hero = document.querySelector("[data-hero]");
 
+/////////////
+/// util funcs
+//////////////
+function readNavFlag() { // for page transitions
+  if (sessionStorage.getItem("rp-nav") === "1") {
+    sessionStorage.removeItem("rp-nav");
+    return true;
+  }
+  return false;
+}
+
 function splitWords(el) {
   var textNodes = [];
   var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
@@ -20,7 +31,7 @@ function splitWords(el) {
 
   textNodes.forEach(function (textNode) {
     var frag = document.createDocumentFragment();
-    var parts = textNode.nodeValue.split(/(\s+)/);
+    var parts = textNode.nodeValue.split(/(\s+)/); // look for whitespace separators
 
     parts.forEach(function (part) {
       if (!part) {
@@ -47,7 +58,11 @@ function splitHeadings() {
   gsap.utils.toArray("[data-split]").forEach(splitWords);
 }
 
-function prepare() {
+///////////////
+// main code
+///////////////
+
+function init() {
   splitHeadings();
 
   gsap.set(gsap.utils.toArray("[data-reveal]"), { y: 24, opacity: 0 });
@@ -57,9 +72,7 @@ function prepare() {
     gsap.set(el.querySelectorAll(".word-inner"), { yPercent: 110 });
   });
 
-  if (header) {
-    gsap.set(header, { y: -16, opacity: 0 });
-  }
+  gsap.set(header, { y: -16, opacity: 0 });
 
   if (hero) {
     gsap.set(hero.querySelectorAll("[data-hero-item]"), {
@@ -71,10 +84,7 @@ function prepare() {
 
 function playIntro() {
   var tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-
-  if (header) {
-    tl.to(header, { y: 0, opacity: 1, duration: 0.6 });
-  }
+  tl.to(header, { y: 0, opacity: 1, duration: 0.6 });
 
   if (!hero) {
     return;
@@ -99,31 +109,29 @@ function playIntro() {
 function startScroll() {
   var items = gsap.utils.toArray("[data-reveal]");
 
-  if (items.length) {
-    if (ScrollTrigger) {
-      ScrollTrigger.batch(items, {
-        start: "top 88%",
-        once: true,
-        onEnter: function (batch) {
-          gsap.to(batch, {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-            ease: "expo.out",
-            stagger: 0.1,
-            overwrite: true,
-          });
-        },
-      });
-    } else {
-      gsap.to(items, {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "expo.out",
-        stagger: 0.05,
-      });
-    }
+  if (ScrollTrigger) {
+    ScrollTrigger.batch(items, {
+      start: "top 88%",
+      once: true,
+      onEnter: function (batch) {
+        gsap.to(batch, {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "expo.out",
+          stagger: 0.1,
+          overwrite: true,
+        });
+      },
+    });
+  } else {
+    gsap.to(items, {
+      y: 0,
+      opacity: 1,
+      duration: 0.8,
+      ease: "expo.out",
+      stagger: 0.05,
+    });
   }
 
   var headings = gsap.utils.toArray("[data-split]").filter(function (el) {
@@ -155,28 +163,12 @@ function startScroll() {
   });
 }
 
-function readNavFlag() {
-  try {
-    if (sessionStorage.getItem("rp-nav") === "1") {
-      sessionStorage.removeItem("rp-nav");
-      return true;
-    }
-  } catch (error) {}
-  return false;
-}
-
 function playSplash(done) {
-  if (!splash) {
-    done();
-    return;
-  }
-
   var inner = splash.querySelector(".splash-inner");
   var mark = splash.querySelector(".splash-mark");
   var sub = splash.querySelector(".splash-sub");
   var fill = splash.querySelector(".splash-bar-fill");
 
-  gsap.killTweensOf(splash);
   gsap.set(splash, { yPercent: 0 });
 
   var tl = gsap.timeline({ defaults: { ease: "expo.out" } });
@@ -194,15 +186,9 @@ function playSplash(done) {
     return;
   }
 
-  if (mark) {
-    tl.from(mark, { yPercent: 40, opacity: 0, duration: 0.8 });
-  }
-  if (sub) {
-    tl.from(sub, { opacity: 0, duration: 0.6 }, "-=0.35");
-  }
-  if (fill) {
-    tl.to(fill, { scaleX: 1, duration: 0.9, ease: "expo.inOut" }, "-=0.4");
-  }
+  tl.from(mark, { yPercent: 40, opacity: 0, duration: 0.8 });
+  tl.from(sub, { opacity: 0, duration: 0.6 }, "-=0.35");
+  tl.to(fill, { scaleX: 1, duration: 0.9, ease: "expo.inOut" }, "-=0.4");
   tl.to(splash, {
     yPercent: -100,
     duration: 0.75,
@@ -212,54 +198,16 @@ function playSplash(done) {
   });
 }
 
-function isTransitionable(anchor) {
-  if (!anchor || !anchor.getAttribute) {
-    return false;
-  }
-  if (anchor.target && anchor.target !== "_self") {
-    return false;
-  }
-  if (anchor.hasAttribute("download")) {
-    return false;
-  }
-  var href = anchor.getAttribute("href");
-  if (!href || href.charAt(0) === "#") {
-    return false;
-  }
-  if (/^(mailto:|tel:|javascript:)/i.test(href)) {
-    return false;
-  }
-  return (
-    new URL(anchor.href, window.location.href).origin ===
-    window.location.origin
-  );
-}
-
 function setupTransitions() {
-  if (!splash) {
-    return;
-  }
-
   var navigating = false;
 
   document.addEventListener("click", function (event) {
-    if (
-      navigating ||
-      event.defaultPrevented ||
-      event.button !== 0 ||
-      event.metaKey ||
-      event.ctrlKey ||
-      event.shiftKey ||
-      event.altKey
-    ) {
+    if (navigating || event.defaultPrevented)
+    {
       return;
     }
 
     var anchor = event.target.closest ? event.target.closest("a") : null;
-    if (!isTransitionable(anchor)) {
-      return;
-    }
-
     var url = new URL(anchor.href, window.location.href);
     var here = new URL(window.location.href);
     if (url.pathname === here.pathname && url.search === here.search) {
@@ -269,11 +217,8 @@ function setupTransitions() {
     event.preventDefault();
     navigating = true;
 
-    try {
-      sessionStorage.setItem("rp-nav", "1");
-    } catch (error) {}
+    sessionStorage.setItem("rp-nav", "1");
 
-    gsap.killTweensOf(splash);
     gsap.set(splash, { yPercent: 100 });
     gsap.set(splash.querySelector(".splash-inner"), { autoAlpha: 0 });
 
@@ -288,7 +233,7 @@ function setupTransitions() {
   });
 }
 
-prepare();
+init();
 playSplash(function () {
   playIntro();
   startScroll();
