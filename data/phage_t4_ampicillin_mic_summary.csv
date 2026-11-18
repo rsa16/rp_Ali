@@ -1,0 +1,6 @@
+phage_cnctr_label,mean_mic_ug_per_ml,std_dev
+0 PFU/mL,26.7,9.238
+1 x 10^4 PFU/mL,21.3,9.238
+1 x 10^6 PFU/mL,10.7,4.619
+1 x 10^8 PFU/mL,5.33,2.309
+1 x 10^10 PFU/mL,2.67,1.155

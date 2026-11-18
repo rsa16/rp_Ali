@@ -205,6 +205,39 @@ footer {
   will-change: transform;
 }
 
+.results-figure {
+  max-width: 860px;
+}
+
+.results-card {
+  border: 1px solid rgb(33 37 41 / 14%);
+  border-top: 3px solid rgb(var(--accent));
+  box-shadow: 0 10px 30px -24px rgb(33 37 41 / 55%);
+}
+
+.results-chart {
+  position: relative;
+  height: clamp(300px, 48vw, 470px);
+}
+
+.results-caption {
+  color: #6c757d;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.figure-link {
+  display: block;
+}
+
+.figure-link img {
+  transition: opacity 0.3s ease;
+}
+
+.figure-link:hover img {
+  opacity: 0.8 !important;
+}
+
 .js [data-reveal],
 .js [data-split],
 .js [data-hero-item],
