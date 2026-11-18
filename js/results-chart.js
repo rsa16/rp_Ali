@@ -8,7 +8,7 @@ function tooltipLabel(label) {
   return label.replace(" x ", " \u00d7 ");
 }
 
-// we don't need the labels on the axis to have the unit too 
+// we don't need the labels on the axis to have the unit too
 // when it's already on the bottom
 function axisLabel(label) {
   return tooltipLabel(label).replace(" PFU/mL", "");
@@ -17,9 +17,10 @@ function axisLabel(label) {
 function parseCsv(text) {
   return text
     .trim() // get rid of whitespace
-    .split('\n') // split into lines
+    .split("\n") // split into lines
     .slice(1) // remove first row, column names
-    .map(function (line) { // split each by comma and map everything into an array of objects
+    .map(function (line) {
+      // split each by comma and map everything into an array of objects
       var cells = line.split(",");
       return {
         label: cells[0].trim(),
@@ -32,7 +33,7 @@ function parseCsv(text) {
 function render(rows) {
   var chart = document.getElementById("mic-chart");
   var bodyFont = window.getComputedStyle(document.body).fontFamily;
-  
+
   Chart.defaults.font.family = bodyFont;
   Chart.defaults.color = "#212529";
 
@@ -61,8 +62,8 @@ function render(rows) {
           hoverBackgroundColor: BAR_HOVER_COLORS,
           borderWidth: 0,
           borderRadius: 2,
-          categoryPercentage: 0.68,
-          barPercentage: 0.82,
+          categoryPercentage: 0.68, // categoryPercentage controls how much of each slot can be used for a bar
+          barPercentage: 0.82, // controls the width of the bar within the slot. both used to control spacing
           errorBarColor: "#212529",
           errorBarWhiskerColor: "#212529",
           errorBarLineWidth: 1.25,
@@ -76,7 +77,7 @@ function render(rows) {
       maintainAspectRatio: false,
       animation: { duration: 1000 },
       layout: { padding: { top: 18, right: 8, left: 0, bottom: 0 } },
-      interaction: { mode: "index", intersect: false },
+      interaction: { mode: "index", intersect: false }, // so we can hover the general area and have the tooltip still display
       scales: {
         x: {
           grid: { display: false },
@@ -85,7 +86,7 @@ function render(rows) {
             color: "#495057",
             font: { size: 12 },
             maxRotation: 0,
-            autoSkip: false,
+            autoSkip: false, // otherwise chart js hides the labels when theres not enough space
           },
           title: {
             display: true,
@@ -116,7 +117,8 @@ function render(rows) {
       },
       plugins: {
         legend: { display: false },
-        tooltip: { // custom tooltip
+        tooltip: {
+          // custom tooltip
           backgroundColor: "#212529",
           padding: 10,
           displayColors: false,
@@ -128,7 +130,7 @@ function render(rows) {
             label: (item) => [
               "Mean MIC: " + String(item.raw.y) + " \u03bcg/mL",
               "SD: \u00b1" + String(item.raw.sd) + " \u03bcg/mL",
-            ]
+            ],
           },
         },
       },
@@ -137,8 +139,8 @@ function render(rows) {
 }
 
 fetch(DATA_CSV)
-  .then(resp => resp.text())
-  .then(text => render(parseCsv(text)))
-  .catch(err => {
+  .then((resp) => resp.text())
+  .then((text) => render(parseCsv(text)))
+  .catch((err) => {
     console.error("Could not load MIC data:", err);
   });
